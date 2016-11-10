@@ -1,0 +1,2180 @@
+html {
+          box-sizing: border-box;
+        }
+        
+        *,
+        *:before,
+        *:after {
+          box-sizing: inherit;
+        }
+        /*This code makes sure everything is flush against sides of viewport*/
+        
+        body {
+          margin: 0;
+          padding: 0;
+          font-family: 'Gudea', sans-serif;
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4 {
+          font-family: 'Kreon', serif;
+          color: #0a1a3d;
+        }
+        
+        .hide {
+          visibility: hidden;
+        }
+        
+        #container {
+          /*This is specifying that this one container(ie:slide) should fill full screen*/
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          overflow: hidden;
+          /*If you dont define overflow:hidden, you'll get a scroll bar to slides off screen*/
+        }
+        
+        .slide {
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          padding: 10px;
+          -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+          background-color: #acc5fe;
+        }
+        /*3d transforms- allows you to position content in 3d space*/
+        
+        .slide article {
+          position: absolute;
+          top: 1vw;
+          bottom: 12vw;
+          left: 8vw;
+          right: 8vw;
+          padding: 20px;
+        }
+        
+        .left {
+          -webkit-transform: translate3d(-100%, 0, 0);
+          transform: translate3d(-100%, 0, 0);
+        }
+        
+        .right {
+          -webkit-transform: translate3d(100%, 0, 0);
+          transform: translate3d(100%, 0, 0);
+        }
+        
+        .center {
+          -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+        }
+        
+        #cover .next {
+          z-index: 1000;
+          position: absolute;
+          bottom: 50px;
+          right: 50px;
+          text-decoration: none;
+          font-size: 4em;
+          color: #0a1a3d;
+        }
+        
+        .next {
+          z-index: 1000;
+          position: absolute;
+          bottom: 50px;
+          right: 50px;
+          text-decoration: none;
+          font-size: 4em;
+          color: #0a1a3d;
+        }
+        
+        .back {
+          z-index: 1000;
+          position: absolute;
+          bottom: 50px;
+          left: 50px;
+          text-decoration: none;
+          font-size: 4em;
+          color: #0a1a3d;
+        }
+        
+        .action {
+          z-index: 1000;
+          position: absolute;
+          bottom: 50px;
+          right: 125px;
+          text-decoration: none;
+          font-size: 4em;
+          color: #0a1a3d;
+        }
+        
+        .home {
+          z-index: 1000;
+          position: absolute;
+          bottom: 50px;
+          right: 200px;
+          text-decoration: none;
+          font-size: 4em;
+          color: #0a1a3d;
+        }
+        
+        .slide article h2 {
+          font-size: 7vw;
+          margin: 0;
+        }
+        
+        .slide article p {
+          font-size: 3vw;
+        }
+        
+        #cover {
+          background: url(assets/cover-polarbear.jpg) no-repeat;
+          background-size: cover;
+          background-positioning: right top;
+        }
+        
+        #cover h1 {
+          font-size: 12vw;
+          margin: 0;
+          line-height: 10vw;
+          margin-bottom: 6vw;
+        }
+        
+        #cover h1 span {
+          font-weight: 300;
+          color: #acc5fe;
+          text-shadow: -2px -2px 0 #011544, 2px -2px 0 #011544, -2px 2px 0 #011544, 2px 2px 0 #011544;
+        }
+        
+        #cover h2 {
+          color: #14347a;
+          margin: 0;
+          font-size: 5vw;
+        }
+        
+        .hide {
+          visibility: hidden;
+        }
+        
+        p {
+          color: #0a1a3d;
+        }
+        
+        #p1 {
+          background: url(assets/slide1-wavingEskimo.jpg) no-repeat;
+          background-size: cover;
+          background-positioning: right top;
+        }
+        
+        #p1 div h2 {
+          font-size: 5.6vw;
+          margin-bottom: -2.2vw;
+        }
+        
+        #p1 div p {
+          font-size: 2.8vw;
+        }
+        
+        #p1 div {
+          background-color: #f0ffff;
+          border-radius: 25px;
+          filter: alpha(opacity=80);
+          opacity: 0.80;
+          padding: 20px;
+          font-size: 1vw;
+          margin-top: -1vw;
+        }
+        
+        #p2 {
+          background: url(assets/slide2-ice.jpg) no-repeat;
+          background-size: cover;
+          background-positioning: right top;
+        }
+        
+        #p2 .html {
+          background-color: #acc5fe;
+          border-radius: 25px;
+          filter: alpha(opacity=60);
+          opacity: 0.60;
+          padding: 15px;
+          margin-top: -1vw;
+        }
+        
+        #p2 .html p {
+          font-size: 2.75vw;
+          color: #0E0968;
+        }
+        
+        #p2 .html h2 {
+          color: #0E0968;
+        }
+        
+        p {
+          color: #0a1a3d;
+        }
+        
+        #p2 div.hidden {
+          background-color: #acc5fe;
+          border-radius: 25px;
+          filter: alpha(opacity=60);
+          opacity: 0.60;
+          padding: 15px;
+          visibility: hidden;
+          color: #0E0968;
+        }
+        
+        #p2 div.hidden p {
+          font-size: 2.5vw;
+          color: #0E0968;
+        }
+        
+        #p2 .next,
+        #p2 .back,
+        #p2 .home,
+        #p2 .action {
+          color: #0E0968;
+        }
+        /*My CSS starts here:*/
+        
+        #p3 {
+          background: url(assets/slide3-mountains.jpg);
+          background-size: cover;
+        }
+        
+        #p3 h2,
+        #p5 h2,
+        #p13 h2 {
+          color: white;
+          background-color: #0a1a3d;
+          padding: 10px;
+        }
+        
+        #p3 h2 {
+          font-size: 4vw;
+          margin-bottom: 1%;
+        }
+        
+        .frosted {
+          background-color: rgba(255, 255, 255, 0.6);
+          padding: 20px;
+          max-height: 500px;
+        }
+        
+        #p3 p,
+        #p5 p {
+          margin-top: 10px;
+          margin-bottom: 0;
+        }
+    
+#p3 p strong{
+  font-size: 4vh;
+  line-height: .6;
+}
+        
+        #p3 li {
+          color: #0a1a3d;
+          font-size: 2.5vw;
+        }
+        
+        #p3 .action {
+          right: 125px;
+          bottom: 50px;
+        }
+        
+        #p5 {
+          background-image: url(assets/slide5-northernlights.jpg);
+          background-size: cover;
+        }
+        
+        #smidgeRight {
+          position: fixed;
+          color: white;
+          background-color: #0a1a3d;
+          padding: 10px;
+          border-radius: 40px;
+          font-size: 8px;
+          z-index: 2000;
+          bottom: 14px;
+          left: 110px;
+        }
+        
+        .alignCenter {
+          z-index: 2000;
+          position: fixed;
+          color: white;
+          font-size: 8px;
+          background-color: #0a1a3d;
+          padding: 10px;
+          border-radius: 40px;
+          bottom: 14px;
+          left: 110px;
+        }
+        
+        .CSSexample1 {
+          z-index: 999;
+          height: 100%;
+          width: 100%;
+          max-height: 450px;
+          border: 70px solid rgba(0, 0, 0, .3)
+        }
+        
+        .CSSexample2 {
+          background: url(assets/slide3-altCSS.png);
+          background-size: cover;
+          z-index: 999;
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          padding: 10px;
+          max-height: 450px;
+          border: solid 30px #696969;
+        }
+        
+        .CSSexample1 {
+          display: flex;
+          flex-direction: column;
+          align-content: stretch;
+        }
+        
+        .CSSexample1 #snow1 {
+          color: #4169E1;
+          font-size: 4em;
+          background-color: #c0c0c0;
+          font-family: 'Mountains of Christmas', cursive;
+          text-align: center;
+          padding-top: 0;
+          width: 100%;
+          height: 100%;
+        }
+        
+        .CSSexample1 #snow2 {
+          background-color: #F0F8FF;
+          color: #4682B4;
+          font-size: 4em;
+          font-family: 'Shadows Into Light Two', cursive;
+          text-align: left;
+          padding-top: 0;
+          padding-left: 10%;
+          height: 100%;
+        }
+        
+        .CSSexample1 #snow3 {
+          background-color: #B0E0E6;
+          color: #0a1a3d;
+          font-size: 5em;
+          font-family: 'Satisfy', Arial, serif;
+          text-align: right;
+          padding-top: 0;
+          padding-right: 10%;
+          height: 100%;
+        }
+        
+        .CSSexample2 #snow1,
+        .CSSexample2 #snow2,
+        .CSSexample2 #snow3 {
+          background-color: rgba(255, 255, 255, 0.4);
+          max-height: 165px;
+          color: #336699;
+          text-align: center;
+          font-family: 'Mountains of Christmas', cursive;
+          border: solid grey;
+          text-shadow: 1px .1em .5em white;
+        }
+        
+        .CSSexample2 #snow1 {
+          font-size: 3vw;
+          margin-left: 45%;
+          margin-right: 45%;
+          margin-top: 0;
+          margin-bottom: 0;
+          border-radius: 50%;
+        }
+        
+        .CSSexample2 #snow2 {
+          font-size: 3em;
+          line-height: 85%;
+          margin-left: 40%;
+          margin-right: 40%;
+          margin-top: 0;
+          margin-bottom: 0;
+          padding-top: 2%;
+          padding-bottom: 2%;
+          border-radius: 50%;
+        }
+        
+        .CSSexample2 #snow3 {
+          font-size: 5em;
+          line-height: 85%;
+          margin-left: 36%;
+          margin-right: 36%;
+          margin-top: 0;
+          margin-bottom: 0;
+          padding-top: 2%;
+          padding-bottom: 2%;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          border-radius: 50%;
+        }
+        
+        #p4 {
+          background-size: cover;
+          margin: 0;
+          padding: 0;
+        }
+        
+        #p4 div {
+          background-color: #f0f5fe;
+          border-radius: 25px;
+          filter: alpha(opacity=60);
+          opacity: 0.80;
+          padding: 2vw;
+        }
+        
+        #p4 div p {
+          font-size: 2.5vw;
+        }
+        
+        #p4 .video_background {
+          bottom: 0px;
+          right: 0px;
+          z-index: -1;
+          overflow: hidden;
+        }
+        
+        #p4 .video_pattern {
+          position: fixed;
+          opacity: 0.8;
+          left: 0px;
+          top: 0px;
+          z-index: -2;
+        }
+        /*End SLIDE 4*/
+        /*Slide 5*/
+        
+        #p5 .frosted {
+          font-size: 2vw;
+          border-radius: 0;
+        }
+        
+        #p5 h2 {
+          padding-left: 5%;
+          font-size: 6.5vw;
+        }
+        
+        #p5 h3 {
+          font-size: 2vw;
+        }
+        
+        #p5 p {
+          color: #0a1a3d;
+          font-size: 2vw;
+        }
+        
+        #p5 .home,
+        #p5 .next,
+        #p5 .back,
+        #p5 .action {
+          color: #196666;
+          text-shadow: -2px -2px 0 #011544, 2px -2px 0 #011544, -2px 2px 0 #011544, 2px 2px 0 #011544;
+        }
+        
+        .flexLabels {
+          margin-top: 25px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          margin-bottom: 0;
+          width: 100%;
+          color: white;
+          background-color: #0a1a3d;
+          padding: 10px;
+          font-size: 2vw;
+        }
+        
+        .flex {
+          margin-top: 0;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          background-color: rgb(102, 153, 153);
+          margin-bottom: 205px;
+        }
+        
+        .flex2 {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          padding: 15px;
+        }
+        
+        .listItems:hover {
+          background-color: #e5e5e5;
+          padding: 5px;
+        }
+        
+        .transparent1 {
+          background-color: rgba(102, 153, 153, .6);
+        }
+        
+        .round1 {
+          border-radius: 40px 40px 40px 40px;
+        }
+        
+        .dropShadow1 {
+          box-shadow: 30px 30px 20px 10px rgba(0, 0, 0, .5);
+        }
+        
+        .txtShadow1 {
+          text-shadow: 1px .1em .3em white;
+        }
+        
+        .colorGradient1 {
+          background: linear-gradient( #996699, #669999, #f0f5f5)
+        }
+        
+        .fancyBorder1 {
+          border-image: url(assets/slide5-snowborder.png) 100 round;
+          border-width: 40px;
+        }
+        
+        .skew1 {
+          transform: skew( 0deg, 6deg);
+        }
+        
+        .rotate1 {
+          transform: rotate( -45deg);
+        }
+        
+        .matrix1 {
+          transform: matrix(0.2, 0.3, -0.8, 0.5, 0, 0);
+        }
+        
+        .translate1 {
+          transform: translate(50px, 50px);
+        }
+        
+        .scale1 {
+          transform: scale(0.9, 2);
+        }
+        /*Slide 5 ends here*/
+        /*Slide 6*/
+        
+        #p6 {
+          background: url(assets/slide6-sunset.jpg) no-repeat;
+          background-size: cover;
+          background-positioning: right top;
+        }
+        
+        #p6 .action,
+        #p6 .next,
+        #p6 .back {
+          color: #ECB028;
+          text-shadow: -2px -2px 0 #011544, 2px -2px 0 #011544, -2px 2px 0 #011544, 2px 2px 0 #011544;
+        }
+        
+        #p6 h2 {
+          color: #ECB028;
+          font-size: 10vw;
+          text-shadow: -2px -2px 0 #011544, 2px -2px 0 #011544, -2px 2px 0 #011544, 2px 2px 0 #011544;
+        }
+        /*Slide 6 ends here*/
+        /*Slide 7*/
+        
+        #p7 {
+          background: url(assets/slide7-snow.jpg) no-repeat;
+          background-size: cover;
+          background-positioning: right top;
+        }
+        
+        #p7 article {
+          padding: 0;
+          top: 0;
+          left: 0;
+          right: 0;
+        }
+        
+        #p7 article #heading-c {
+          background-color: #0a1a3d;
+          background-size: cover;
+          margin: 0;
+          padding: 0;
+        }
+        
+        #p7 article #heading-c h2 {
+          color: #f0f5fe;
+          font-size: 7vw;
+          padding: 10px 10px 10px 50px;
+        }
+        
+        #p7 .box-hold {
+          margin-left: 2vw;
+          margin-top: 2vw;
+        }
+        
+        #p7 .contrast p {
+          padding: 0;
+          margin: 0;
+        }
+        
+        #p7 .contrast {
+          -webkit-border-radius: 20vw;
+          -moz-border-radius: 20vw;
+          border-radius: 20vw;
+          width: 40vw;
+          height: 10vw;
+          padding: 3vw;
+          background-color: #0a1a3d;
+          color: #f0f5fe;
+          font-family: Arial;
+          font-size: 1.3vw;
+          display: inline-block;
+          vertical-align: middle;
+        }
+        
+        #p7 #walrus {
+          background: url(assets/slide7-walrus.jpg);
+          background-repeat: no-repeat;
+          background-size: cover;
+          -webkit-border-radius: 50vw;
+          -moz-border-radius: 50vw;
+          border-radius: 50vw;
+          width: 18vw;
+          height: 18vw;
+          border: 5px solid #0a1a3d;
+          padding: 10px;
+          display: inline-block;
+          vertical-align: middle;
+        }
+        /*Slide 7 ends here*/
+        /*Slide 8*/
+        
+        #p8 {
+          background: url(assets/slide8-ice.jpg) no-repeat;
+          background-size: cover;
+          background-positioning: right top;
+        }
+        
+        #p8 h2 {
+          color: #f0f5fe;
+          text-shadow: -2px -2px 0 #183c90, 2px -2px 0 #183c90, -2px 2px 0 #183c90, 2px 2px 0 #183c90;
+          margin-bottom: -2.4vw;
+        }
+        
+        #p8 h3 {
+          text-shadow: -1px -1px 0 #f0f5fe, 1px -1px 0 #f0f5fe, -1px 1px 0 #f0f5fe, 1px 1px 0 #f0f5fe;
+          font-size: 3vw;
+          margin-left: 10vw;
+          color: #183c90;
+          font-family: Gudea;
+          margin-bottom: -1vw;
+        }
+        
+        #p8 div img {
+          width: 18vw;
+          height: 18vw;
+          border: solid #183c90;
+          border-radius: 25px;
+          background-color: #f0f5fe;
+          margin: 10px;
+          opacity: 0.5;
+        }
+        
+        #p8 div img:hover {
+          opacity: 1;
+        }
+        
+        #p8 div {
+          display: inline-block;
+        }
+        
+        #p8 .underwater {
+          display: flex;
+          display: -moz-flex;
+          display: -ms-flex;
+          display: -webkit-flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          justify-content: center;
+        }
+        
+        #p8 .next,
+        #p8 .back,
+        #p8 .home,
+        #p8 .action {
+          color: #f0f5fe;
+          text-shadow: -2px -2px 0 #011544, 2px -2px 0 #011544, -2px 2px 0 #011544, 2px 2px 0 #011544;
+        }
+        /*Slide 8 ends here*/
+        /*Slide 9*/
+        
+        #p9 {
+    background: url(assets/slide9-white.jpg) no-repeat;
+  background-size: cover;
+  background-positioning: right top;
+}
+
+#p9 h2 {
+  color: #f0f5fe;
+  text-shadow:
+    -2px -2px 0 #011544,
+    2px -2px 0 #011544,
+    -2px 2px 0 #011544,
+    2px 2px 0 #011544;
+  margin-left: 4vw;
+}
+
+#p9 h3{
+  margin: 0vw 4vw 0vw 4vw;
+  font-size: 2.8vw;
+  font-family: gudea;
+    color: #011544;
+  text-shadow:
+    -1px -1px 0 #f0f5fe,
+    1px -1px 0 #f0f5fe,
+    -1px 1px 0 #f0f5fe,
+    1px 1px 0 #f0f5fe;
+}
+
+
+
+#p9 #flex-balance1 {
+  float: right;
+  display: flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  flex-wrap: no-wrap;
+  justify-content:flex-start;
+  justify-content: center;
+}
+
+#p9 #flex-balance2 {
+  float: left;
+  display: flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  justify-content:flex-end;
+  flex-wrap: wrap;
+}
+
+#p9 div {
+  display: inline-block;
+  border: solid #011544;
+  margin: 1vw;
+}
+
+#p9 div img {
+  width: 12vw;
+  height: 10.5vw;
+  margin: 0;
+  display: block;
+}
+
+#p9 .imgBox:hover { -moz-box-shadow: 0 0 10px #ccc;
+  -webkit-box-shadow: 0 0 10px #ccc;
+  box-shadow: 0 0 15px #ccc; }
+
+#p9 .pointer { cursor: pointer; }
+
+#p9 .next, #p9 .back, #p9 .home{
+  color: #011544;
+}
+/*Slide 9 ends here*/
+       
+/*Slide 10*/
+        #p10 {
+          background: url(assets/slide10-water.jpg) no-repeat;
+          background-size: cover;
+          background-positioning: right top;
+        }
+        
+        #p10 article {
+          top: 0.8vw;
+        }
+        
+        #p10 h2 {
+          margin-left: 14vw;
+          font-size: 6vw;
+          color: #f0f5fe;
+          text-shadow: -2px -2px 0 #011544, 2px -2px 0 #011544, -2px 2px 0 #011544, 2px 2px 0 #011544;
+        }
+        
+        #p10 h4 {
+          margin-left: 12vw;
+          margin-right: 12vw;
+          font-size: 2vw;
+          color: #f0f5fe;
+          text-shadow: -2px -2px 0 #011544, 2px -2px 0 #011544, -2px 2px 0 #011544, 2px 2px 0 #011544;
+        }
+        
+        #p10 .content {
+          margin-left: 8vw;
+          width: 40vw;
+          position: absolute;
+        }
+        
+        #p10 .content div {
+          border: 2px solid #011544;
+          height: 8vw;
+          margin: 10px;
+          position: absolute;
+          padding: 3vw;
+          color: #011544;
+          background-color: #f0f5fe;
+          font-size: 2vw
+        }
+        
+        #p10 .content #one {
+          left: 17%;
+          top: 1vw;
+          width: 18vw;
+          text-align: right;
+          border-radius: .5em 2em .5em 2em;
+        }
+        
+        #p10 .content #two {
+          left: 65%;
+          top: 1vw;
+          width: 24vw;
+          border-radius: 4em 2em 4.5em .5em;
+        }
+        
+        #p10 .content #three {
+          left: 2%;
+          top: 10vw;
+          width: 24vw;
+          text-align: right;
+          border-radius: 2em .5em 2em 4.5em;
+        }
+        
+        #p10 .content #four {
+          left: 65%;
+          top: 9.5vw;
+          width: 18vw;
+          border-radius: .5em 2em .5em 2em;
+        }
+        
+        #p10 .next,
+        #p10 .back,
+        #p10 .home,
+        #p10 .action {
+          color: #f0f5fe;
+          text-shadow: -2px -2px 0 #011544, 2px -2px 0 #011544, -2px 2px 0 #011544, 2px 2px 0 #011544;
+        }
+        /*Slide 10 ends here*/
+        
+		/*Slide 11*/
+        #p11 .home {
+          color: #f0f5fe;
+          text-shadow: -2px -2px 0 #011544, 2px -2px 0 #011544, -2px 2px 0 #011544, 2px 2px 0 #011544;
+        }
+        
+        #p11 h2 {
+          margin-left: 6vw;
+          font-size: 7.5vw;
+          color: #f0f5fe;
+          z-index: 100;
+          position: absolute;
+          text-shadow: -2px -2px 0 #011544, 2px -2px 0 #011544, -2px 2px 0 #011544, 2px 2px 0 #011544;
+          top: 3vw;
+        }
+        
+        #p11 h4 {
+          margin-left: 10vw;
+          margin-right: 10vw;
+          font-size: 4.5vw;
+          color: #f0f5fe;
+          z-index: 100;
+          text-shadow: -2px -2px 0 #011544, 2px -2px 0 #011544, -2px 2px 0 #011544, 2px 2px 0 #011544;
+          position: absolute;
+          top: 8vw;
+        }
+        
+        #p11 div {
+          width: 15%;
+          height: 100%;
+          display: inline-block;
+          z-index: -100;
+        }
+        
+        #p11 .ice {
+          background-color: #183c90;
+          opacity: 0.5;
+        }
+        
+        #p11 .snow {
+          opacity: 0.5;
+          background-color: #2357d2;
+        }
+        
+        #p11 .sleet {
+          opacity: 0.5;
+          background-color: #5d85e4;
+        }
+        
+        #p11 .rain {
+          opacity: 0.5;
+          background-color: #2357d2;
+        }
+        
+        #p11 .storm {
+          opacity: 0.5;
+          background-color: #183c90;
+        }
+        
+        #p11 article {
+          top: 0px;
+          bottom: 125px;
+          left: 8vw;
+          right: 8vw;
+          padding: 0px;
+        }
+        
+        #p11 .arrow-up {
+          width: 0;
+          height: 0;
+          border-left: 50px solid transparent;
+          border-right: 50px solid transparent;
+          border-bottom: 100px solid #f0f5fe;
+        }
+        
+        #p11 .arrow-down {
+          width: 0;
+          height: 0;
+          border-left: 50px solid transparent;
+          border-right: 50px solid transparent;
+          border-top: 100px solid #9fb6ef;
+        }
+        
+        #p11 {
+          background: url(assets/slide11-stalagmites.jpg) no-repeat;
+          background-size: cover;
+          background-positioning: right top;
+        }
+        
+        #p11 .next,
+        #p11 .back,
+        #p11 .home,
+        #p11 .action {
+          color: #f0f5fe;
+          text-shadow: -2px -2px 0 #011544, 2px -2px 0 #011544, -2px 2px 0 #011544, 2px 2px 0 #011544;
+        }
+        /*Slide 11 ends here*/
+        
+        #p12 .next,
+        #p13 .next,
+        #p14 .next,
+        #p14 .next,
+        #p15 .next,
+        #p16 .next {
+          z-index: 1000;
+          position: absolute;
+          bottom: 50px;
+          right: 50px;
+          text-decoration: none;
+          font-size: 4em;
+          color: #0a1a3d;
+        }
+        
+        #p12 .back,
+        #p13 .back,
+        #p14 .back,
+        #p15 .back,
+        #p16 .back {
+          z-index: 1000;
+          position: absolute;
+          bottom: 50px;
+          left: 50px;
+          text-decoration: none;
+          font-size: 4em;
+          color: #0a1a3d;
+        }
+        
+        #p12 .home,
+        #p13 .home,
+        #p14 .home,
+        #p15 .home,
+        #p16 .home {
+          z-index: 1000;
+          position: absolute;
+          bottom: 50px;
+          right: 200px;
+          text-decoration: none;
+          font-size: 4em;
+          color: #0a1a3d;
+        }
+        /*Slide 12*/
+        
+        #p12 {
+          background-color: white;
+          background-image: url("assets/slide12-goats.jpg");
+          background-size: cover;
+        }
+        
+        #p12 article {
+          -webkit-transform: rotate(-5deg);
+          -moz-transform: rotate(-5deg);
+          -o-transform: rotate(-5deg);
+          -ms-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+        }
+        
+        #p12 #canvas13 {
+          display: block;
+        }
+        /*Slide 12 ends here*/
+        /*SLIDE 13 starts here*/
+        
+        #p13 .frosted {
+          background-color: rgba(255, 255, 255, 0.82);
+          padding: 20px;
+        }
+        
+        #p13 {
+          background-color: white;
+          background-image: url("assets/slide13-icicles.png");
+          background-size: cover;
+        }
+        
+        #p13 p {
+          font-size: 2.8vw;
+        }
+        
+        #p13 h2 {
+          font-size: 6vw;
+        }
+        /*End of P13*/
+        
+        #p14 h2,
+        #p15 h2,
+        #p16 h2 {
+          color: #0a1a3d;
+        }
+        /*SLIDE 14 HERE! */
+        
+        #p14 {
+          background-color: #50A6C2;
+          padding: 0;
+          margin: 0;
+        }
+        
+        #p14 article {
+          margin: 0;
+          padding: 0;
+        }
+        
+        #p14 h2 {
+          margin-top: 3%;
+          max-height: 250px;
+        }
+        
+        #p14 h1 {
+          padding: 0;
+          margin: 0;
+          font-size: 1.5vw;
+        }
+        
+        .flex3 {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          align-items: stretch;
+          max-height: 250px;
+          background-color: rgb(102, 153, 153);
+        }
+        
+        .bigR {
+          background-color: white;
+          font-size: 4vw;
+          margin: 2%;
+          padding-left: 1%;
+          padding-right: 1%;
+          text-decoration: bold;
+          border: solid 4px black;
+        }
+        
+        .bigR1 {
+          background-color: white;
+          text-decoration: bold;
+          padding-left: 1%;
+          padding-right: 1%;
+          border: solid 4px black;
+        }
+        
+        .flex4 {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+        }
+        
+        #r1,
+        #r2,
+        #r3,
+        .middle {
+          max-height: 150px;
+        }
+        
+        #r1 {
+          padding-left: 3%;
+        }
+        
+        #r3 {
+          padding-left: 3%;
+        }
+        
+        #r2 {
+          padding-left: 3%;
+        }
+        
+        .middle {
+          background-color: rgb(102, 153, 153);
+          padding: 1%
+        }
+        /*P14 done */
+        
+
+/*PAge 15*/
+        .frosted {
+          background-color: rgba(255, 255, 255, 0.6);
+          padding: 20px;
+          max-height: 500px;
+          border-radius: 50px;
+        }
+        
+        #p15 {
+          background: url("assets/slide15-snowyhills.jpg") no-repeat;
+          background-size: cover;
+        }
+        
+        .old {
+          font-size: 6vh;
+          font-weight: bold;
+        }
+        
+        .big {
+          position: relative;
+          margin-top: 0px;
+          font-size: 10vw;
+          text-align: center;
+          padding: 1%;
+          margin: 0;
+          color: white;
+          background-color: #0a1a3d;
+          border-radius: 50%;
+        }
+        
+        .small {
+          position: absolute;
+          text-align: right;
+          margin-top: 20%;
+        }
+        
+        .pushRight {
+          margin-left: 40%;
+          border: solid #0a1a3d 3px;
+          padding: 3%;
+        }
+        
+        .font {
+          font-size: 4vh;
+          color: #0a1a3d;
+          font-style: italic;
+        }
+        
+        .uppercase {
+          text-transform: uppercase;
+          font-weight: bold;
+          font-size: 6vh;
+        }
+        
+        .italic {
+          font-style: italic;
+          font-size: 4vh;
+        }
+        
+        #p15 h2,
+        #p15 .next,
+        #p15 .back,
+        #p15 .home,
+        #p15 .action {
+          color: #0a1a3d;
+          text-shadow: -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff, 2px 2px 0 #fff;
+        }
+        /*Page 16  --> Starts here */
+        
+        #p16 {
+          background-image: url("assets/slide16-snowflake.png");
+          background-position: left top;
+          background-repeat: no-repeat;
+          background-size: 40%;
+          background-color: #737CA1;
+        }
+        
+        #p16 p {
+          width: 60%;
+          margin-left: 40%;
+          font-size: 3vw;
+        }
+        
+        #p16 h2 {
+          font-size: 10vw;
+          color: white;
+          text-align: center;
+          padding-left: 25%;
+          font-family: 'Satisfy', Arial, serif;
+        }
+        
+        #p16 .frosted {
+          border-radius: 50px;
+        }
+        
+        #p16 p span {
+          padding-left: 50%;
+        }
+        /*P16 ends here*/
+        /*Here's SLIDE 17*/
+        
+        #p17 {
+          background: url("assets/slide17-skyline.jpg")
+        }
+        
+        #p17 h2 {
+          font-size: 7.5vw;
+        }
+        
+        #p17 p {
+          font-size: 4.5vw;
+        }
+        /*p17 end*/
+        /*SLIDE 18*/
+        
+        #p18 {
+          background: url("assets/slide18-mountain.jpg");
+          background-size: cover;
+          background-positioning: right top;
+        }
+        
+        #p18 div h2 {
+          font-size: 5.6vw;
+          margin-bottom: -2.2vw;
+        }
+        
+        #p18 div p {
+          font-size: 2.5vw;
+        }
+        
+        #p18 div {
+          background-color: #f0ffff;
+          border-radius: 25px;
+          filter: alpha(opacity=80);
+          opacity: 0.80;
+          padding: 20px;
+          font-size: 1vw;
+          margin-top: -1vw;
+        }
+        
+        #p18 .next,
+        #p18 .back,
+        #p18 .action,
+        #p18 .home {
+          text-shadow: -2px -2px 0 #f0f5fe, 2px -2px 0 #f0f5fe, -2px 2px 0 #f0f5fe, 2px 2px 0 #f0f5fe;
+        }
+        /*End of SLIDE 18*/
+        /*Page 19- MAP - starts here*/
+        
+        #map {
+          height: 60vh;
+          width: 65vw;
+          margin: 0;
+          border: solid black;
+        }
+        
+        #p19 {
+          background-color: #990000;
+        }
+        
+        #p19 h2,
+        #p19 .next,
+        #p19 .back,
+        #p19 .home,
+        #p19 .action{
+          color: black;
+          text-shadow: -2px -2px 0 #FFD500, 2px -2px 0 #FFD500, -2px 2px 0 #FFD500, 2px 2px 0 #FFD500;
+        }
+        
+        #md {
+          position: relative;
+          display: block;
+          width: 110%;
+          height: 30%;
+          margin-left: -5%;
+          margin-bottom: 2%;
+          margin-top: -5%;
+          text-align: center;
+          background-image: url("assets/slide19-maryland.png")
+        }
+        
+        #other {
+          height: 60vh;
+          border: solid black;
+          width: 35vw;
+          padding: 1.5%;
+          margin-left: 1.5%;
+          font-size: 2vw;
+          background-color: #FFD500;
+        }
+        
+        #flx {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+        }
+        /*End of SLIDE 19*/
+        /*SLIDE 20*/
+        
+        #p20 {
+          background: url(assets/slide20-iceberg.jpg) no-repeat;
+          background-size: cover;
+          background-positioning: right top;
+        }
+        
+        #p20 div h2 {
+          font-size: 5.6vw;
+          margin-bottom: -2.2vw;
+        }
+        
+        #p20 div p {
+          font-size: 2.5vw;
+        }
+        
+        #p20 div {
+          background-color: #f0ffff;
+          border-radius: 25px;
+          filter: alpha(opacity=80);
+          opacity: 0.80;
+          padding: 20px;
+          font-size: 1vw;
+          margin-top: -1vw;
+        }
+        /*End of SLIDE 20*/
+        /*SLIDE 21*/
+        
+        #p21 {
+          background: url("assets/slide21-icecaves.jpg") no-repeat;
+          background-size: cover;
+        }
+        
+        #p21 div {
+          background-color: pink;
+          border-radius: 25px;
+          filter: alpha(opacity=80);
+          opacity: 0.80;
+          padding: 10px;
+          margin-bottom: 1%;
+        }
+        
+#p21 div:nth-child(1) {
+          background-color: #f0ffff;
+        }
+        
+        #p21 p {
+          font-size: 1.6vw;
+        }
+        
+        .axis path,
+        .axis line {
+          fill: none;
+          stroke: #000;
+          shape-rendering: crispEdges;
+        }
+        
+        .axis text {
+          font-family: 'Arial';
+          font-size: 17px;
+        }
+        
+        .chart text {
+          font: 15px sans-serif;
+        }
+        
+        .chart .title {
+          font: 25px sans-serif;
+        }
+        
+        .tick {
+          stroke-dasharray: 1, 2;
+        }
+        
+        .bar {
+          fill: steelblue;
+        }
+        
+        .bar:hover {
+          fill: turquoise;
+        }
+        
+        #p21 .back,
+        #p21 .action, #p21 .next {
+          color: #0a1a3d;
+          text-shadow: -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff, 2px 2px 0 #fff;
+        }
+        /*End SLIDE 21*/
+        /*SLIDE 22*/
+        
+        #p22 {
+          background: url(assets/slide22-icechuncks.jpg) no-repeat;
+          background-size: cover;
+          background-positioning: right top;
+        }
+        
+        #p22 div h2 {
+          font-size: 5.6vw;
+          margin-bottom: -2.2vw;
+        }
+        
+        #p22 div p {
+          font-size: 2.5vw;
+        }
+        
+        #p22 div {
+          background-color: #f0ffff;
+          border-radius: 25px;
+          filter: alpha(opacity=80);
+          opacity: 0.80;
+          padding: 20px;
+          font-size: 1vw;
+          margin-top: -1vw;
+        }
+
+#p22 .back, #p22 .home, #p22 .action, #p22 .next {
+          color: #0a1a3d;
+          text-shadow: -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff, 2px 2px 0 #fff;
+}
+        /*End SLIDE 22*/
+
+
+
+
+
+        @media (min-width:600px) {
+         #p3 .CSSexample2 #snow3{
+            margin-left: 25%;
+            margin-right: 25%;
+            padding-top: 7%;
+            padding-bottom: 7%;
+          }
+          #p3 .CSSexample2 #snow2{
+            margin-left: 35%;
+            margin-right: 35%;
+            padding-top: 5%;
+            padding-bottom: 5%;
+          }
+          #p3 .CSSexample2 #snow1{
+            margin-left: 40%;
+            margin-right: 40%;
+            padding-top: 3%;
+            padding-bottom:3%;
+          }
+          #p3 .alignCenter {
+            position: fixed;
+            margin-left: 0px;
+            margin-bottom: 115px;
+            font-size: 2vw;
+          }
+}
+        
+@media (min-width:800px) {
+          #p3 .frosted {
+            padding-top: 0px;
+            max-height: 62vh;
+          }
+          
+          #p3 .CSSexample2{
+            width: 96%;
+          }
+          
+          #p3 #smidgeRight {
+            position: relative;
+            width: 50vw;
+            margin-left: 9%;
+            margin-top: 2%;
+            font-size: 2vw;
+            text-align: center;
+          }
+          
+  #p19 #flx #other{
+    font-size: 1.7vw;
+  }
+          #p3 .CSSexample2 #snow3{
+            margin-left: 25%;
+            margin-right: 25%;
+            padding-top: 5%;
+            padding-bottom: 5%;
+          }
+          #p3 .CSSexample2 #snow2{
+            margin-left: 35%;
+            margin-right: 35%;
+            padding-top: 3%;
+            padding-bottom: 3%;
+          }
+          #p3 .CSSexample2 #snow1{
+            margin-left: 40%;
+            margin-right: 40%;
+            padding-top: 1%;
+            padding-bottom:1%;
+          }
+
+          #p3 li {
+            font-size: 3.7vh;
+            padding-top:0;
+          }
+          #p7 .contrast {
+            width: 35vw;
+            height: 25vw;
+            padding: 57px;
+            background-color: #183c90;
+            color: #f0f5fe;
+            font-family: Arial;
+            font-size: 2.4vw;
+          }
+          #p7 #walrus {
+            width: 20vw;
+            height: 20vw;
+          }
+          #p15 .big {
+            font-size: 6vh;
+          }
+          #p15 .frosted {
+            max-height: 400px;
+          }
+          #p15 .pushRight {
+            margin-left: 15%;
+            padding: 0;
+          }
+          #p15 #footer {
+            font-size: 4vh;
+          }
+        }
+
+
+
+         
+        @media(min-width:900px) {
+          #p3 .alignCenter {
+            position: fixed;
+            margin-left: 50px;
+            margin-bottom: -35px;
+            font-size: 2vw;
+          }
+		  }
+
+        @media(max-width:900px) {
+          #p15 #footer {
+            font-size: 3vh;
+          }
+          #p15 .frosted {
+            padding-top: 0;
+          }
+          #p15 .pushRight {
+            margin-left: 25%;
+          }
+          #p15 .small {
+            margin-top: 40%;
+          }
+          #p19 #other{
+            font-size: 2vw;
+          }
+		  }
+        
+        @media (max-width:800px) {
+          #p3 h2 {
+            font-size: 6vw;
+          }
+          #p3 .frosted {
+            max-height: 530px;
+          }
+          #p3 li {
+            font-size: 3.3vh;
+            padding-top: 2%;
+          }
+          #p3 #smidgeRight {
+            text-align: center;
+            margin-bottom: 45px;
+          }
+
+          #p3 strong {
+            font-size: 3vh;
+          }
+          #p15 .frosted {
+            margin-top: -5%;
+            max-height: 550px;
+          }
+          #p15 #footer {
+            font-size: 2vh;
+            margin-top: 1%;
+          }
+          #p15 .pushRight {
+            padding: 0;
+            margin-top: 0;
+          }
+          #p7 .contrast {
+            width: 30vw;
+            height: 40vw;
+            padding: 45px;
+            background-color: #183c90;
+            color: #f0f5fe;
+            font-family: Arial;
+            font-size: 2.6vw;
+          }
+          #p7 #walrus {
+            width: 25vw;
+            height: 25vw;
+          }
+        }
+        
+        @media (max-width:750px) {
+          #cover h1 {
+            font-size: 15vw;
+            line-height: 14vw;
+            margin-bottom: 6vw;
+            margin-left: -7vw;
+          }
+          #cover h2 {
+            margin: 0;
+            font-size: 6vw;
+            margin-left: -7vw;
+          }
+          #p1 div p {
+            font-size: 4vw;
+          }
+          #p1 div {
+            margin: -4vw;
+            filter: alpha(opacity=85);
+            opacity: 0.85;
+          }
+          #p2 .html p {
+            font-size: 4vw;
+          }
+          #p2 .html {
+            margin: -4vw;
+            filter: alpha(opacity=70);
+            opacity: 0.70;
+          }
+          #p3 .frosted {
+            max-height: 600px;
+          }
+          #p3 li {
+            font-size: 3vh;
+            padding-top: 2%;
+          }
+          #p3 strong {
+            font-size: 4vh;
+          }
+          
+          #p3 #snow3{
+            font-size: 8vh;
+          }
+          
+          #p4 div p {
+            font-size: 3.4vw;
+          }
+          #p6 h2 {
+            font-size: 10vw;
+          }
+          #p7 article #heading-c h2 {
+            font-size: 7.6vw;
+            padding: 15px 15px 15px 50px;
+          }
+          #p8 h2 {
+            font-size: 6.5vw;
+          }
+          #p8 h3 {
+            font-size: 4vw;
+          }
+          #p8 div img {
+            width: 22vw;
+            height: 22vw;
+          }
+          #p8 .underwater {
+            flex-wrap: wrap
+          }
+          #p9 h2 {
+            font-size: 4.8vw;
+          }
+          #p9 h3 {
+            font-size: 3.6vw;
+          }
+          #p10 h2 {
+            font-size: 6.3vw;
+            margin-bottom: 0;
+          }
+          #p10 h4 {
+            font-size: 2.7vw;
+            margin-bottom: 1vw;
+          }
+          #p10 .content div {
+            font-size: 3.5vw
+          }
+          #p10 .content #one {
+            width: 28vw;
+            left: 1%;
+            height: 10vw
+          }
+          #p10 .content #two {
+            left: 72%;
+            width: 26vw;
+            height: 10vw
+          }
+          #p10 .content #three {
+            left: 6%;
+            width: 26vw;
+            height: 10vw;
+            top: 12vw;
+          }
+          #p10 .content #four {
+            width: 28vw;
+            left: 72%;
+            height: 10vw;
+            top: 12vw;
+          }
+          #p11 div {
+            width: 5%;
+          }
+          #p12 h2 {
+            font-size: 6.5vw;
+          }
+          #p12 p {
+            font-size: 4.5vw;
+          }
+          #p13 p {
+            font-size: 3.2vw;
+          }
+          #p16 p {
+            font-size: 3.5vw;
+          }
+          #p16 p span {
+            padding-left: 15%;
+          }
+          #p18 div p {
+            font-size: 4vw;
+          }
+          #p18 div {
+            margin: -4vw;
+            filter: alpha(opacity=85);
+            opacity: 0.85;
+          }
+          #p20 div p {
+            font-size: 4vw;
+          }
+          #p20 div {
+            margin: -4vw;
+            filter: alpha(opacity=85);
+            opacity: 0.85;
+          }
+          #p22 div p {
+            font-size: 4vw;
+          }
+          #p22 div {
+            margin: -4vw;
+            filter: alpha(opacity=85);
+            opacity: 0.85;
+          }
+        }
+        
+        @media(max-width:700px) {
+          #p3 .frosted {
+            max-height: 550px;
+          }
+          #p3 li {
+            font-size:2vh;
+            padding-top: 0;
+          }
+          
+          #p3 #snow2{
+            font-size: 7vh;
+          }
+          #p13 .frosted {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+          }
+          
+          #p3 .alignCenter {
+            position: fixed;
+            margin-left: 0px;
+            margin-bottom: 115px;
+            font-size: 4vw;
+          }
+         
+          #p15 .old {
+            font-size: 4vh;
+          }
+          #p15 .uppercase {
+            font-size: 4.5vh;
+          }
+          #p17 h2 {
+            font-size: 10vw;
+          }
+          #p17 p {
+            font-size: 6vw;
+          }
+        }
+        
+        @media(max-width: 600px) {
+          #p3 strong {
+            font-size: 1.5vh;
+            line-height: 1;
+          }
+          #p3 .frosted {
+            max-height: 600px;
+          }
+          #p3 #smidgeRight {
+            position: relative;
+            width: 50vw;
+            margin-top: 5%;
+          }
+          
+          #p3 li{
+            font-size: 2.6vh;
+          }
+          
+          #p3 #snow3{
+            font-size: 6vh;
+          }
+          
+          #p3 #snow2{
+            font-size: 6vh;
+          }
+          
+          #p3 #snow1{
+            font-size: 6vh;
+          }
+          
+           #p3 .CSSexample2 #snow3{
+            margin-left: 10%;
+            margin-right: 10%;
+            padding-top: 15%;
+            padding-bottom: 15%;
+          }
+          #p3 .CSSexample2 #snow2{
+            margin-left: 22%;
+            margin-right: 22%;
+            padding-top: 7%;
+            padding-bottom: 7%;
+          }
+          #p3 .CSSexample2 #snow1{
+            margin-left: 30%;
+            margin-right: 30%;
+            padding-top: 5%;
+            padding-bottom:5%;
+            line-height:.9;
+            font-size: 4.5vw;
+          }
+          
+          #p4 div p {
+            font-size: 3.6vw;
+          }
+          #p6 h2 {
+            font-size: 9vw;
+            width: 16vw;
+            margin-left: 0;
+            margin-right: 0;
+            left: 2vw;
+            right: 2vw;
+          }
+          #p7 article #heading-c h2 {
+            font-size: 8.2vw;
+            padding: 18px 18px 18px 50px;
+          }
+          #p7 .contrast {
+            width: 32vw;
+            height: 55vw;
+            padding: 48px;
+            background-color: #183c90;
+            color: #f0f5fe;
+            font-family: Arial;
+            font-size: 2.8vw;
+          }
+          #p7 #walrus {
+            width: 28vw;
+            height: 28vw;
+          }
+          #p8 h2 {
+            font-size: 7vw;
+          }
+          #p8 h3 {
+            font-size: 4.5vw;
+            margin-bottom: 5px;
+          }
+          #p8 div img {
+            width: 24vw;
+            height: 24vw;
+            margin-left: 5px;
+          }
+          #p9 h2 {
+            font-size: 5vw;
+          }
+          #p9 h3 {
+            font-size: 3.75vw;
+          }
+          #p9 div img {
+            width: 15vw;
+            height: 13.125vw;
+          }
+          #p10 .content {
+            margin-left: 6vw
+          }
+          #p10 h2 {
+            font-size: 6.9vw;
+            margin-left: 8vw;
+          }
+          #p10 h4 {
+            font-size: 3.6vw;
+            margin-left: 8vw;
+            margin-right: 8vw;
+          }
+          #p10 .content div {
+            font-size: 3.6vw
+          }
+          #p11 h2 {
+            font-size: 8.6vw
+          }
+          #p11 h4 {
+            font-size: 6.7vw
+          }
+          #p13 p {
+            font-size: 3.5vw;
+          }
+          #p13 h2 {
+            font-size: 6.4vw;
+          }
+          #p16 p {
+            font-size: 3.75vw;
+          }
+          #p18 p {
+            font-size: 3vw;
+          }
+        }
+        
+        @media(max-width:560px) {
+          #p3 strong {
+            font-size: 2.3vh;
+          }
+          #p3 h2 {
+            font-size: 3vh;
+            margin-top: -5%;
+          }
+          #p3 li {
+            font-size: 2.3vh;
+          }
+          #p3 .frosted {
+            max-height: 500px;
+          }
+          #p15 .pushRight {
+            margin-left: 36%;
+          }
+        }
+        
+        @media(max-width: 500px) {
+          #p15 .uppercase,
+          #p15 .italic {
+            font-size: 3vh;
+          }
+          #cover h1 {
+            font-size: 16vw;
+            line-height: 14vw;
+            margin-bottom: 8vw;
+            margin-left: -7vw;
+          }
+          #cover h2 {
+            color: #14347a;
+            margin: 0;
+            font-size: 8vw;
+            margin-left: -7vw;
+          }
+          #p1 div p {
+            font-size: 5vw;
+          }
+          #p1 div {
+            margin: -4vw;
+            filter: alpha(opacity=90);
+            opacity: 0.90;
+          }
+          #p2 .html {
+            margin: -4vw;
+            filter: alpha(opacity=80);
+            opacity: 0.80;
+          }
+          #p2 .html p {
+            font-size: 5vw;
+            color: #0E0968;
+          }
+          #p4 div p {
+            font-size: 5vw;
+          }
+          #p6 h2 {
+            font-size: 12vw;
+          }
+          #p7 article #heading-c h2 {
+            font-size: 9vw;
+            padding: 20px 20px 20px 50px;
+          }
+          #p8 h2 {
+            font-size: 8vw;
+          }
+          #p8 h3 {
+            font-size: 5.3vw;
+            margin-left: 0;
+            left: 0;
+          }
+          #p8 div img {
+            width: 26vw;
+            height: 26vw;
+            margin: 0;
+          }
+          #p8 .underwater {
+            margin-left: -4vw;
+            margin-right: -4vw;
+          }
+          #p9 h2 {
+            margin-left: 2vw;
+            font-size: 6vw;
+          }
+          #p9 h3 {
+            margin: 0vw 2vw 0vw 2vw;
+            font-size: 4.7vw;
+          }
+          #p9 div img {
+            width: 20vw;
+            height: 17.5vw;
+          }
+          #p9 .imgBox .back {
+            font-size: 3.5vw;
+          }
+          #p10 .content #one {
+            height: 16vw;
+          }
+          #p10 .content #two {
+            height: 16vw;
+          }
+          #p10 .content #three {
+            top: 18vw;
+            height: 18vw;
+          }
+          #p10 .content #four {
+            top: 18vw;
+            height: 18vw;
+          }
+          #p11 h2 {
+            font-size: 9vw;
+          }
+          #p11 h4 {
+            font-size: 7vw;
+          }
+          #p12 h2 {
+            font-size: 9vw;
+          }
+          #p12 p {
+            font-size: 7.5vw;
+          }
+          #p13 p {
+            font-size: 4vw;
+          }
+          #p16 p {
+            font-size: 4.8vw;
+          }
+          #p17 h2 {
+            font-size: 13vw;
+          }
+          #p17 p {
+            font-size: 9vw;
+          }
+          #p18 div p {
+            font-size: 4.5vw;
+          }
+          #p18 div {
+            margin: -4vw;
+            filter: alpha(opacity=90);
+            opacity: 0.90;
+          }
+          #p20 div p {
+            font-size: 4.5vw;
+          }
+          #p20 div {
+            margin: -4vw;
+            filter: alpha(opacity=90);
+            opacity: 0.90;
+          }
+          #p22 div p {
+            font-size: 4.5vw;
+          }
+          #p22 div {
+            margin: -4vw;
+            filter: alpha(opacity=90);
+            opacity: 0.90;
+          }
+        }
+        
+        @media(max-width: 450px) {
+          #p3 #snow1{
+            font-size: 5vh;
+          }
+          
+          #p3 #snow2{
+            font-size: 5vh;
+          }
+          
+          #p3 #snow3{
+            font-size: 5vh;
+          }
+          
+          #p7 article #heading-c h2 {
+            font-size: 9.4vw;
+            padding: 25px 25px 25px 50px;
+          }
+          #p7 .contrast {
+            width: 60vw;
+            height: 40vw;
+            background-color: #183c90;
+            color: #f0f5fe;
+            font-family: Arial;
+            font-size: 3.6vw;
+            padding: 0;
+            margin: 0;
+          }
+          #p7 #walrus {
+            width: 100vw;
+            height: 100vw;
+          }
+        }
+        
+        @media(max-width: 400px) {
+          #p3 .frosted {
+            max-height: 500px;
+          }
+          #p3 li {
+            padding: 0;
+            font-size: 1.5vh;
+          }
+          #p3 strong {
+            font-size: 1.5vh;
+          }
+          #p3 #smidgeRight {
+            position: fixed;
+            text-align: center;
+            margin-bottom: 25%;
+          }
+          #p15 .small {
+            margin-top: -10%;
+          }
+          #p15 .pushRight {
+            margin-left: 0;
+          }
+        }

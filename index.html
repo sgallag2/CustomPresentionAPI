@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>Presentation API</title>
+  <meta name="viewport" content="initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="main.css">
+
+  <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Gudea:400,700,400italic|Kreon:700,400,300">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mountains+of+Christmas:700|Shadows+Into+Light+Two|Satisfy">
+    
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+  <script src="https://d3js.org/d3.v3.min.js"></script>
+  <script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false&amp;v=3"></script>
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="https://cdn.rawgit.com/nnattawat/flip/v1.0.18/dist/jquery.flip.min.js"></script>
+  
+    
+</head>
+
+<body>
+  <div id="container">
+
+    <!--Cover slide-->
+    <section id="cover" class="slide center">
+      <article>
+        <h1>Presentation API <span>2015</span></h1>
+        <h2>Shannon Gallagher<br>Katelyn Newman</h2>
+      </article>
+      <a class="next" href="#" data-nextPage="p1"><i class="fa fa-arrow-circle-right"></i></a>
+    </section>
+    <!--end of cover slide -->
+
+    <!--SLIDE 1 -->
+    <section id="p1" class="slide right">
+      <article>
+        <div>
+          <h2> Welcome to the Arctic!</h2>
+          <p>In the following presentation, we used HTML for the basic structure, HTML5 and CSS3 to add visual effects and flare, and Javascript/JQuery library files to create interactive elements as we teach you about the elements that go into web design.
+            <br><strong><em>Enjoy!</em></strong></p>
+        </div>
+      </article>
+      <a class="next" href="#" data-nextPage="p2"><i class="fa fa-arrow-circle-right"></i></a>
+
+      <a class="back" href="#" data-prevPage="cover"><i class="fa fa-arrow-circle-left"></i></a>
+
+      <a class="home" href="#" data-nextPage="cover"><i class="fa fa-home"></i></a>
+    </section>
+    <!--end of SLIDE 1 -->
+
+
+    <!--SLIDE 2 -->
+    <section id="p2" class="slide right">
+      <article>
+        <div class="html">
+          <h2> HTML</h2>
+          <p> Hypertext Markup Language (HTML) is the standard language used to create web pages. Markup language refers to the tags that define a page’s elements and its layout.
+            <br>
+            <br> Click the Plus sign below to see this page's HTML. </p>
+        </div>
+        <div class="hidden">
+          <p>
+            &lt;h2&gt; HTML&lt;/h2&gt;
+            <br> &lt;p&gt; Hypertext Markup Language (HTML) is the standard language used to create web pages. “Markup language” refers to the tags that define a page’s elements and its layout.
+            <br>&lt;br&gt;&lt;br&gt;
+            <br> Click the next arrow to learn about CSS.&lt;p&gt;</p>
+
+        </div>
+      </article>
+
+      <a class="action" href="#"><i class="fa fa-plus-circle"></i></a>
+
+      <a class="next" href="#" data-nextPage="p3"><i class="fa fa-arrow-circle-right"></i></a>
+
+      <a class="back" href="#" data-prevPage="p1"><i class="fa fa-arrow-circle-left"></i></a>
+
+      <a class="home" href="#" data-nextPage="cover"><i class="fa fa-home"></i></a>
+    </section>
+    <!--end of SLIDE 2 -->
+
+
+    <!--Slide 3-->
+    <section id="p3" class="slide right">
+      <article>
+        <h2>Cascading Style Sheets (CSS)</h2>
+        <!--Examples- appear when PLUS icon is clicked -->
+        <div class="example hide CSSexample2">
+          <p id="snow1">Let it Snow</p>
+          <p id="snow2">Let it Snow</p>
+          <p id="snow3">Let it Snow</p>
+        </div>
+
+        <div class="frosted addHide">
+          <p class="addHide"><strong>CSS is a styling language used to apply styling and design features to a web pages. CSS can be applied in 3 ways:</strong></p>
+          <ol class="addHide">
+            <li>Applied directly to an HTML element.
+              <br>
+              <div style="padding-left:50px; font-size:2vw"><strong>&lt;span style= "color: white"&gt;</strong><span style=" background-color: #0a1a3d; color: white; padding:2px; font-size:2vw;">Wrapping this sentence in &lt;span&gt; tags and applying CSS attributes alters it's appearance. </span><strong>&lt;/span&gt;</strong></div>
+            </li>
+            <li>Applied to entire HTML document by specifying CSS styling within &lt;head&gt; section of HTML page</li>
+            <li>Create a seperate CSS page and link to it within HTML. Using this techniques, web developers are able to use one CSS page to uniformly style multiple webpages.</li>
+          </ol>
+        </div>
+        <p id="smidgeRight" class="addHide" style="font-size:2vw;">Click the plus icon to see how applying
+          <br> CSS can alter a webpage's appearance.</p>
+        <p class="alignCenter hide">Click the plus icon again to change
+          <br> the style by adding new CSS.</p>
+      </article>
+      <a class="next" href="#" data-nextPage="p4"><i class="fa fa-arrow-circle-right"></i></a>
+
+      <a class="back" href="#" data-prevPage="p2"><i class="fa fa-arrow-circle-left"></i></a>
+
+      <a class="action"><i class="fa fa-plus-circle"></i></a>
+
+      <a class="home" href="#" data-nextPage="cover"><i class="fa fa-home"></i></a>
+    </section>
+    <!--end of slide 3-->
+
+
+    <!--  P4  -->
+    <section id="p4" class="slide right">
+      <article>
+        <div>
+          <h2> HTML5</h2>
+          <p> HTML5 is the fifth major standard of HTML. In other words, it is the most up-to-date HTML language, simplifying the way designers code a webpage’s source and its corresponding CSS styles.
+            <br>
+            <br><em> For example, this page uses the &lt;video&gt; tag to display the background.</em>
+
+          </p>
+        </div>
+      </article>
+      <a class="next" href="#" data-nextPage="p5"><i class="fa fa-arrow-circle-right"></i></a>
+
+      <a class="back" href="#" data-prevPage="p3"><i class="fa fa-arrow-circle-left"></i></a>
+
+      <a class="home" href="#" data-nextPage="cover"><i class="fa fa-home"></i></a>
+      <!--VIDEOOO-->
+      <video class="video_background" preload="auto" controls autoplay loop muted volume="0">
+        <source src="http://gdurl.com/yvUo"></source>
+      </video>
+    </section>
+    <!--end of slide P4-->
+
+
+    <!--Slide 5-->
+    <section id="p5" class="slide right">
+      <article id="article5">
+        <h2>CSS3</h2>
+        <p class="frosted">CSS3 is the latest standard of CSS.
+          <br>CSS3 expands upon CSS, offering a wider range of styling capabilities including:</p>
+
+
+        <div class="flexLabels category">
+          <div>Additional decorative properties:</div>
+          <div>2D transformations:</div>
+        </div>
+
+
+        <div class="flex" id="toggleme">
+          <div id="column1">
+            <div class="flex2">
+              <p><a id="transparent" class="listItems">Transparency: RGBA & HSLA</a></p>
+              <p><a id="round" class="listItems">Rounded corners</a></p>
+              <p><a id="dropShadow" class="listItems">Drop shadows</a></p>
+              <p><a id="txtShadow" class="listItems">Text shadows</a></p>
+              <p><a id="colorGradient" class="listItems">Color Gradients</a></p>
+              <p><a id="fancyBorder" class="listItems">Fancy borders</a></p>
+            </div>
+          </div>
+
+
+          <div id="column2">
+            <div class="flex2">
+              <p id="skew" class="listItems">Skew</p>
+              <p id="rotate" class="listItems">Rotation</p>
+              <p id="matrix" class="listItems">Matrix</p>
+              <p id="translate" class="listItems">Translate</p>
+              <p id="scale" class="listItems">Scale</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h3 class="alignCenter">Click on each CSS3 property to see an example.</h3>
+        </div>
+      </article>
+      <a class="next" href="#" data-nextPage="p6"><i class="fa fa-arrow-circle-right"></i></a>
+
+      <a class="home" href="#" data-nextPage="cover"><i class="fa fa-home"></i></a>
+
+      <a class="back" href="#" data-prevPage="p4"><i class="fa fa-arrow-circle-left"></i></a>
+    </section>
+    <!--end of slide 5-->
+
+    <!--SLIDE 6-->
+    <section id="p6" class="slide right">
+      <article>
+        <h2> The 10 Principles of Design</h2>
+      </article>
+      <a class="next" href="#" data-nextPage="p7"><i class="fa fa-arrow-circle-right"></i></a>
+
+      <a class="home" href="#" data-nextPage="cover"><i class="fa fa-home"></i></a>
+
+      <a class="back" href="#" data-prevPage="p5"><i class="fa fa-arrow-circle-left"></i></a>
+    </section>
+    <!--end of slide 6-->
+
+    <!--SLIDE 7-->
+    <section id="p7" class="slide right">
+      <article>
+        <div id="heading-c">
+          <h2> 1. Contrast</h2> </div>
+        <div class="box-hold">
+          <div class="contrast"><strong>Contrast</strong> in web design plays with the juxtaposition of opposing elements...</div>
+          <div id="walrus"></div>
+          <div class="contrast"> ...through the use of different colors, tones, lines and shapes to produce emphasis.</div>
+        </div>
+      </article>
+      <a class="next" href="#" data-nextPage="p8"><i class="fa fa-arrow-circle-right"></i></a>
+
+      <a class="home" href="#" data-nextPage="cover"><i class="fa fa-home"></i></a>
+
+      <a class="back" href="#" data-prevPage="p6"><i class="fa fa-arrow-circle-left"></i></a>
+    </section>
+    <!--end of slide 7-->
+
+    <!--Slide 8-->
+    <section id="p8" class="slide right">
+      <article>
+        <h2> 2. Emphasis</h2>
+        <h3> Emphasis creates dominant and nondominant elements to draw attention on a single area. Scroll over the pictures to see how emphasis in web design works.</h3>
+        <div class="underwater">
+          <div><img src="assets/slide8-babyseal.jpg" alt="Image unavailable"> <img src="assets/slide8-babyfox.jpg" alt="Image unavailable"> </div>
+          <div>
+            <img src="assets/slide8-polarbear.jpg" alt="Image unavailable"></div>
+        </div>
+      </article>
+
+      <a class="next" href="#" data-nextPage="p9"><i class="fa fa-arrow-circle-right"></i></a>
+
+      <a class="home" href="#" data-nextPage="cover"><i class="fa fa-home"></i></a>
+
+      <a class="back" href="#" data-prevPage="p7"><i class="fa fa-arrow-circle-left"></i></a>
+    </section>
+    <!--end of slide 8-->
+
+
+    <!--Slide 9-->
+    <section id="p9" class="slide right">
+      <article>
+        <h2> 3. Balance</h2>
+        <h3>Balance in web design uses symmetry and repetition to balance a web design. Notice how these babies line up well together, keeping the page in balance. </h3>
+        <section id="flex-balance1" class="pointer">
+          <div class="imgBox flexBig"><img src="assets/slide9-rabbit.jpg" alt="Image unavailable" class="">
+            
+          </div>
+          <div class="imgBox flexNormal"><img src="assets/slide9-fox.jpg" alt="Image unavailable">
+            
+          </div>
+          <div class="imgBox flexNormal"><img src="assets/slide9-seal.jpg" alt="Image unavailable">
+           </div> 
+        </section>    
+          
+          <section id="flex-balance2" class="pointer">
+          
+          <div class="imgBox"><img src="assets/slide9-owl.jpg" alt="Image unavailable">
+           
+          </div>
+          <div class="imgBox flexNormal"><img src="assets/slide9-babypolarbear.jpg" alt="Image unavailable">
+          </div>
+          <div class="imgBox flexBig"><img src="assets/slide9-babyox.jpg" alt="Image unavailable">
+          </div>
+          
+        </section>
+      </article>
+      <a class="next" href="#" data-nextPage="p10"><i class="fa fa-arrow-circle-right"></i></a>
+
+      <a class="home" href="#" data-nextPage="cover"><i class="fa fa-home"></i></a>
+
+      <a class="back" href="#" data-prevPage="p8"><i class="fa fa-arrow-circle-left"></i></a>
+    </section>
+    <!--end of slide 9-->
+
+
+    <!--Slide 10-->
+    <section id="p10" class="slide right">
+      <article>
+        <h2> 4. Unity/Harmony</h2>
+        <h4>Producing unity or harmony in web design refers to the pleasing arrangement of all the parts within a composition. Below, for example, all of the elements are positioned around a central point.</h4>
+        <div class="content">
+          <div id="one"> We</div>
+          <br>
+          <div id="two"> Are</div>
+          <br>
+          <div id="three"> In</div>
+          <br>
+          <div id="four"> Unity </div>
+          <br>
+        </div>
+      </article>
+      <a class="next" href="#" data-nextPage="p11"><i class="fa fa-arrow-circle-right"></i></a>
+
+      <a class="home" href="#" data-nextPage="cover"><i class="fa fa-home"></i></a>
+
+      <a class="back" href="#" data-prevPage="p9"><i class="fa fa-arrow-circle-left"></i></a>
+    </section>
+    <!--end of slide 10-->
+
+    <!--SLIDE 11-->
+    <section id="p11" class="slide right">
+      <article>
+        <h2> 5. Pattern</h2>
+        <h4>Offers a way to keep your design organized while also providing a really nice sense of harmony through the use of repeating elements. </h4>
+        <div class="arrow-up ice"></div>
+        <div class="arrow-down snow"></div>
+        <div class="arrow-up sleet"></div>
+        <div class="arrow-down rain"></div>
+        <div class="arrow-up storm"></div>
+        <div class="arrow-down snow"></div>
+        <div class="arrow-up sleet"></div>
+        <div class="arrow-down rain"></div>
+        <div class="arrow-up storm"></div>
+        <div class="arrow-down snow"></div>
+        <div class="arrow-up sleet"></div>
+        <div class="arrow-down rain"></div>
+        <div class="arrow-up storm"></div>
+        <div class="arrow-down snow"></div>
+        <div class="arrow-up sleet"></div>
+        <div class="arrow-down rain"></div>
+        <div  class="arrow-up storm"></div>
+        <div class="arrow-down snow"></div>
+        <div class="arrow-up sleet"></div>
+        <div class="arrow-down rain"></div>
+        <div  class="arrow-up storm"></div>
+        <div class="arrow-down snow"></div>
+        <div class="arrow-up sleet"></div>
+        <div class="arrow-down rain"></div>
+        <div  class="arrow-up storm"></div>
+        <div class="arrow-down snow"></div>
+        <div class="arrow-up sleet"></div>
+        <div class="arrow-down rain"></div>
+        <div  class="arrow-up storm"></div>
+        <div class="arrow-down snow"></div>
+        <div class="arrow-up sleet"></div>
+        <div class="arrow-down rain"></div>
+        <div  class="arrow-up storm"></div>
+        <div class="arrow-down snow"></div>
+        <div class="arrow-up sleet"></div>
+        <div class="arrow-down rain"></div>
+        <div  class="arrow-up storm"></div>
+        <div class="arrow-down snow"></div>
+        <div class="arrow-up sleet"></div>
+        <div class="arrow-down rain"></div>
+        <div  class="arrow-up storm"></div>
+        <div class="arrow-down snow"></div>
+        <div class="arrow-up sleet"></div>
+        <div class="arrow-down rain"></div>
+        <div  class="arrow-up storm"></div>
+        <div class="arrow-down snow"></div>
+        <div class="arrow-up sleet"></div>
+        <div class="arrow-down rain"></div>
+        <div  class="arrow-up storm"></div>
+        <div class="arrow-down snow"></div>
+        <div class="arrow-up sleet"></div>
+        <div class="arrow-down rain"></div>
+        <div  class="arrow-up storm"></div>
+        <div class="arrow-down snow"></div>
+        <div class="arrow-up sleet"></div>
+        <div class="arrow-down rain"></div>
+        <div  class="arrow-up storm"></div>
+        <div class="arrow-down snow"></div>
+        <div class="arrow-up sleet"></div>
+        <div class="arrow-down rain"></div>
+        <div  class="arrow-up storm"></div>
+        <div class="arrow-down snow"></div>
+        <div class="arrow-up sleet"></div>
+        <div class="arrow-down rain"></div>
+        <div  class="arrow-up storm"></div>
+        <div class="arrow-down snow"></div>
+        <div class="arrow-up sleet"></div>
+        <div class="arrow-down rain"></div>
+        <div  class="arrow-up storm"></div>
+        <div class="arrow-down snow"></div>
+        <div class="arrow-up sleet"></div>
+        <div class="arrow-down rain"></div>
+        <div  class="arrow-up storm"></div>
+      </article>
+      <a class="next" href="#" data-nextPage="p12"><i class="fa fa-arrow-circle-right"></i></a>
+
+      <a class="home" href="#" data-nextPage="cover"><i class="fa fa-home"></i></a>
+
+      <a class="back" href="#" data-prevPage="p10"><i class="fa fa-arrow-circle-left"></i></a>
+    </section>
+    <!--end of slide 11-->
+
+
+    <!--SLIDE 12-->
+    <section id="p12" class="slide right">
+      <canvas id="canvas13">
+      </canvas>
+      <article>
+        <h2 id="justinAguilar">6. Movement</h2>
+        <div class="frosted">
+          <p><strong>Movement is the suggestion of action or direction </strong></p>
+        </div>
+      </article>
+      <a class="next" href="#" data-nextPage="p13"><i class="fa fa-arrow-circle-right"></i></a>
+
+      <a class="home" href="#" data-nextPage="cover"><i class="fa fa-home"></i></a>
+
+      <a class="back" href="#" data-prevPage="p11"><i class="fa fa-arrow-circle-left"></i></a>
+    </section>
+    <!--end of slide 12-->
+
+
+    <!--SLIDE 13-->
+    <section id="p13" class="slide right">
+      <article>
+        <div class="frosted">
+          <h2>7. Rhythm and Repetition</h2>
+          <p><strong>Rhythm and Repetition</strong> occurs in design when one or more elements are repeated often enough to create a visual rhythm.</p>
+          <p>Rhythm and repetition is vital to establishing consistency: it organizes information coherently, guides the audience, brings together the elements of a design, and emphasizes space.</p>
+        </div>
+      </article>
+
+      <a class="next" href="#" data-nextPage="p15"><i class="fa fa-arrow-circle-right"></i></a>
+
+      <a class="back" href="#" data-prevPage="p12"><i class="fa fa-arrow-circle-left"></i></a>
+
+      <a class="home" href="#" data-nextPage="cover"><i class="fa fa-home"></i></a>
+    </section>
+    <!--end of slide 13-->
+
+    
+    <!--Slide 15-->
+    <section id="p15" class="slide right">
+      <article>
+        <div class="frosted">
+          <h3 class="remove small">8. Proportion</h3>
+
+          <p><span class="hide">Proportion is the</span>
+            <span class="new">visual relationship</span>
+            <span class="remove old">between two or more things in terms of </span><span class="new">size, number or degree.</span></p>
+
+          <div class="remove pushRight"><span class="remove italic">Differing proportions within a design</span> creates a system of hierarchy, communicating to viewers<span class="remove uppercase"> which elements are most important.</span></div>
+        </div>
+        <p id="footer" class="addHide frosted">Right now, this design is poorly proportioned. Users cannot quickly pick up on what's most important. Click the plus icon to see how proportion works in web design.</p>
+      </article>
+
+
+      <a class="next" href="#" data-nextPage="p16"><i class="fa fa-arrow-circle-right"></i></a>
+      <a class="back" href="#" data-prevPage="p13"><i class="fa fa-arrow-circle-left"></i></a>
+      <a class="action"><i class="fa fa-plus-circle"></i></a>
+      <a class="home" href="#" data-nextPage="cover"><i class="fa fa-home"></i></a>
+    </section>
+    <!--end of slide 15-->
+
+    <!--Slide 16-->
+    <section id="p16" class="slide right">
+      <article>
+        <div>
+          <h2>Simplicity</h2>
+        </div>
+        <p class="frosted">"Simplicity is about subtracting the obvious, and adding the meaningful."<br><span>-John Madea</span></p>
+      </article>
+
+
+      <a class="next" href="#" data-nextPage="p17"><i class="fa fa-arrow-circle-right"></i></a>
+      <a class="back" href="#" data-prevPage="p15"><i class="fa fa-arrow-circle-left"></i></a>
+      <a class="home" href="#" data-nextPage="cover"><i class="fa fa-home"></i></a>
+
+  </section>
+  <!--end of slide 16-->
+
+  <!--Slide 17-->
+  <section id="p17" class="slide right">
+    <article id="article">
+      <h2>Gradation</h2>
+      <p><strong>Gradation can create movement and depth within a design.</strong></p>
+    </article>
+    <a class="next" href="#" data-nextPage="p18"><i class="fa fa-arrow-circle-right"></i></a>
+    <a class="back" href="#" data-prevPage="p16"><i class="fa fa-arrow-circle-left"></i></a>
+    <a class="home" href="#" data-nextPage="cover"><i class="fa fa-home"></i></a>
+  </section>
+  <!--end of slide 17-->
+
+  <!--SLIDE 18-->
+  <section id="p18" class="slide right">
+    <article>
+      <div>
+        <h2> Google Maps API</h2>
+        <p> A Javascript program that enables web designers to add maps to their websites with customized information and restrictions. For example, with Google Maps API, designers can add maps that centralize on a specific location, change the depth of focus
+          of the map, and click defined points for more information about the map’s content. Go to the next slide to see an example.</p>
+      </div>
+    </article>
+    <a class="next" href="#" data-nextPage="p19"><i class="fa fa-arrow-circle-right"></i></a>
+    <a class="back" href="#" data-prevPage="p17"><i class="fa fa-arrow-circle-left"></i></a>
+    <a class="home" href="#" data-nextPage="cover"><i class="fa fa-home"></i></a>
+  </section>
+
+  <!--Slide 19-->
+  <section id="p19" class="slide right">
+    <article>
+      <div id="md"></div>
+
+      <div id="flx">
+        <div id="map"></div>
+        <div id="other">This map shows mass shootings that occurred in the DMV area in 2015. The map is styled to reflect the Maryland colors. As the map shows, the majority of shootings in the area were centered around Baltimore city and DC. A mass shooting, in this
+          context, is defined as a shooting in which four or more people are killed or injured. Green markers indicate incidents with no fatalities, yellow markers resulted in one death, and red markers more than one person died. Source: <a href="www.shootingtracker.com">shootingtracker.com</a></div>
+      </div>
+    </article>
+    <a class="next" href="#" data-nextPage="p20"><i class="fa fa-arrow-circle-right"></i></a>
+    <a class="back" href="#" data-prevPage="p18"><i class="fa fa-arrow-circle-left"></i></a>
+    <a class="home" href="#" data-nextPage="cover"><i class="fa fa-home"></i></a>
+  </section>
+  <!--end of slide 19-->
+
+
+  <!--SLIDE 20-->
+  <section id="p20" class="slide right">
+    <article>
+      <div>
+        <h2> D3.js</h2>
+        <p> Data-Driven Documents (Hence the D3/D3.js) is a Javascript library for creating dynamic, interactive data visualizations in a web browser. D3 is built on top of common web standards like HTML, HTML5, CSS, and CSS3. Click the next arrow to see an example of D3.js visualization. </p>
+      </div>
+    </article>
+    <a class="next" href="#" data-nextPage="p21"><i class="fa fa-arrow-circle-right"></i></a>
+    <a class="back" href="#" data-prevPage="p19"><i class="fa fa-arrow-circle-left"></i></a>
+    <a class="home" href="#" data-nextPage="cover"><i class="fa fa-home"></i></a>
+  </section>
+  <!--end of slide 20-->
+
+
+  <!--SLIDE 21-->
+  <section id="p21" class="slide right">
+    <article>
+      <div id="outer">
+        <svg class="chart"></svg>
+      </div>
+      <div>
+        <p>This chart, made using D3, shows the number of total shooting homicides in Baltimore by year. As you can see, this number has spiked in 2015. Hover over each bar. Source:<a href="http://data.baltimoresun.com/bing-maps/homicides/index.php?show_results=UPDATE+MAP&range=2015&district=all&zipcode=All&cause=shooting&age=all&gender=all&race=all&article=all"> The Baltimore Sun</a></p>
+      </div>
+    </article>
+    <a class="home" href="#" data-nextPage="cover"><i class="fa fa-home"></i></a>
+    <a class="next" href="#" data-nextPage="p22"><i class="fa fa-arrow-circle-right"></i></a>
+    <a class="back" href="#" data-prevPage="p20"><i class="fa fa-arrow-circle-left"></i></a>
+  </section>
+  <!--end of slide 21-->
+
+  <section id="p22" class="slide right">
+    <article>
+      <div>
+        <h2> Thank You!</h2>
+        <p> This slide concludes our presentation. We would like to thank Corey Kliewer for all of his help this fall and on this project.
+          <br>
+          <br>If you'd like to go through the presentation again, please click the Home button below.
+          <br>
+          <br>Happy Holidays!</p>
+      </div>
+    </article>
+    <a class="back" href="#" data-prevPage="p21"><i class="fa fa-arrow-circle-left"></i></a>
+    <a class="home" href="#" data-nextPage="cover"><i class="fa fa-home"></i></a>
+  </section>
+
+  </div>
+
+</body>
+</html>
